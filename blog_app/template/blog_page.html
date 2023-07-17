@@ -1,0 +1,16 @@
+{% extends 'structure.html' %}
+{% load static %}
+
+{% block title_header %}
+Our Impressive Blogs
+{% endblock title_header %}
+
+{% block main_body %}
+    <h2 class="mb-3 underscore">OUR BLOGS</h2>
+    {% for post in all_post %}
+
+    {% include 'blog_card.html' %}
+
+    {% endfor %}
+
+{% endblock main_body %}

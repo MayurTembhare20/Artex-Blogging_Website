@@ -1,0 +1,12 @@
+{% extends 'structure.html' %}
+
+{% block title_header %}
+   {{post.title}}
+{% endblock title_header %}
+
+{% block main_body %}
+       
+    {% include 'single_post_body.html' with post=post %}
+
+{% endblock main_body %}
+    

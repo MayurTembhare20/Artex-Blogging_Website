@@ -1,0 +1,56 @@
+{% load static %}
+<div class="single-post col-md-8 col-sm-8 ">
+    <h2 class="underscore">{{post.title}}</h2>
+    <div class="post-meta">
+        <span><i class="far fa-user"></i> Posted by Mayur </span><span><i class="far fa-calendar"></i> {{post.created_date}}</span><span><i class="far fa-comment-alt"></i> 6 comments</span>
+    </div>
+    <div>{{post.subtitle}}</div>
+    <img src="{{post.blog_image.url}}" alt="" class="img-fluid">
+    <div>
+        {{post.content | safe}}
+  </div>
+  <div class="posts_wrapper">
+    <h4>comments:</h4>
+    
+    {% if all_comments %}
+  
+            {% for comment in all_comments %}
+            {% include 'single_comment.html' with comment=comment %}
+            {% endfor %}
+
+    {% else %}
+         <p>   No Comments...</p>
+    {% endif %}
+
+  </div>
+
+    <div class="line"></div>
+    <form id="commentForm" method="POST" action="" style="text-transform: none;">
+        {%  csrf_token %}
+        <!-- Message input -->
+        <div class="mb-3"  >
+            <label class="form-label" for="comment">Leave a Comment</label>
+            <textarea name="comment_body" class="form-control" id="comment" type="text" placeholder="write here.." style="height: 10rem;"
+                data-sb-validations="required" style="text-transform: none;" required></textarea>
+            <div class="invalid-feedback" data-sb-feedback="message:required">Comment is required.</div>
+        </div>
+        <!-- Name input -->
+        <div class="mb-3">
+            <input name="comment_author" class="form-control" id="name" type="text" placeholder="Name *" data-sb-validations="required" required/>
+            <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+        </div>
+        
+        <!-- Form submissions success message -->
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">Form submission successful!</div>
+        </div>
+        <!-- Form submissions error message -->
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <!-- Form submit button -->
+        <div class="d-grid">
+            <button class="main-button" id="submitButton" type="submit">Post Comment</button>
+        </div>
+    </form> 
+</div>

@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Firmbee.com - Free Project Management Platform for remote teams">
+  <title>Home Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <script src="https://kit.fontawesome.com/0e035b9984.js" crossorigin="anonymous"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="82">
+  <header id="home">
+    <nav id="#navbar" class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'homepage' %}"><img src="{% static 'img/logo-blog.png' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="{% url 'homepage' %}">home</a>
+            <a class="nav-link" href="{% url 'about' %}">about</a>
+            <a class="nav-link" href="{% url 'contact' %}">contact</a>
+            <a class="nav-link " href="{% url 'blog_page' %}">Blog</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="main-slider">
+      <div class="hero-img">
+        <div class="hero-bg"></div>
+        <div class="container">
+          <div class="hero-text">
+            <div class="welcome-text"><span class="big-text">WELCOME</span><span class="small-text">TO OUR BLOG</span>
+            </div>
+            <p>We provide commentary on a particular subject or topic, ranging from philosophy, films, and arts to science, politics, and sports.</p>
+          </div>
+        </div>
+        <a href="{% url 'about' %}"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+    <section id="about" class="aboutus">
+      <div class="container">
+        <div class="row">
+          <div class="right col-md-6">
+            <div class="text-right">
+              <p>Our blogs combines text, digital images, and links to other blogs, web pages, and other media related to its topic.</p>
+            </div>
+          </div>
+          <div class="left col-md-6">
+            <div class="text-left">
+              <h2 class="underscore">about us</h2>
+              <p class="sup-header">Discussion emerged as to whether the newspaper industry would benefit from a stimulus package by the federal government.  </p>
+              <p class="">The impact of blogging on the mainstream media has also been acknowledged by governments. In 2009, the presence of the American journalism industry had declined to the point that several newspaper corporations were filing for bankruptcy, resulting in less direct competition between newspapers within the same circulation area. Discussion emerged as to whether the newspaper industry would benefit from a stimulus package by the federal government. U.S. President Barack Obama acknowledged the emerging influence of blogging upon society by saying, "if the direction of the news is all blogosphere, all opinions, with no serious fact-checking, no serious attempts to put stories in context, then what you will end up getting is people shouting at each other across the void, but not a lot of mutual understanding</p>
+            </div>
+            <a href="{% url 'contact' %}" class="main-button">Let’s work together</a>
+          </div>
+        </div>
+      </div>
+      <div class="black-div"></div>
+    </section>
+    <section id="contact" class="social-media">
+      <div class="container">
+        <h2>WANT TO KNOW MORE ABOUT US?</h2>
+        <a href="#"><img src="{% static 'img/facebook-footer.svg' %}" alt="facebook"></a>
+        <a href="#"><img src="{% static 'img/instagramm-footer.svg' %}" alt="instagram"></a>
+        <a href="#"><img src="{% static 'img/pinterest-footer.svg' %}" alt="pinterest"></a>
+      </div>
+    </section>
+    <section class="new-articles">
+      <div class="card-group">
+        <div class="card bg-dark text-white">
+          <img src="{% static 'img/architecture-1857175_1920.jpg' %}" class="card-img" alt="...">
+          <div class="card-img-overlay p-3">
+            <div class="text-overlay">
+              <p class="card-text text-uppercase">Most Popular</p>
+              <h5 class="card-title text-uppercase">filmy chatchit </h5>
+              <div class="line"></div>
+              <div class="card-text autor-data d-flex pb-3">
+                <p class="post-autor text-uppercase">Posted by Raju&nbsp;</p>
+                <p class="post-data text-uppercase">| 06 01 2023</p>
+              </div>
+              <a href="{% url 'blog_page' %}" class="card-button">Read article</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-dark text-white">
+          <img src="{% static 'img/castle-1998435_1920.jpg' %}" class="card-img" alt="...">
+          <div class="card-img-overlay p-3">
+            <div class="text-overlay">
+              <p class="card-text text-uppercase">Most Popular</p>
+              <h5 class="card-title text-uppercase">Legal and social experiments </h5>
+              <div class="line"></div>
+              <div class="card-text autor-data d-flex pb-3">
+                <p class="post-autor text-uppercase">Posted by Kiran&nbsp;</p>
+                <p class="post-data text-uppercase">| 07 01 2023</p>
+              </div>
+              <a href="{% url 'blog_page' %}" class="card-button">Read article</a>
+            </div>
+          </div>
+        </div>
+        <div class="card bg-dark text-white">
+          <img src="{% static 'img/staircase-274614_1920.jpg' %}" class="card-img" alt="...">
+          <div class="card-img-overlay p-3">
+            <div class="text-overlay">
+              <p class="card-text text-uppercase">Most Popular</p>
+              <h5 class="card-title text-uppercase">Consumer-generated artical </h5>
+              <div class="line"></div>
+              <div class="card-text autor-data d-flex pb-3">
+                <p class="post-autor text-uppercase">Posted by Leena&nbsp;</p>
+                <p class="post-data text-uppercase">| 08 01 2023</p>
+              </div>
+              <a href="{% url 'blog_page' %}" class="card-button">Read article</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="posts" class="recent-posts">
+      <div class="container">
+        <h2 class="underscore">RECENT POSTS</h2>
+        <p class="sup-header">Consumer-generated advertising </p>
+        <div class="posts-wrapper">
+          <div class="post-item">
+            <div class="post-meta">
+              <span><i class="far fa-user"></i> Posted by Ashish</span><span><i class="far fa-calendar"></i> 01 01 2023</span>
+            </div>
+            <a href="single-post.html" class="post-title">Consumer-oriented advertising.</a>
+            <p class="post-content">Consumer-generated advertising is a relatively new and controversial development, and it has created a new model of marketing communication from businesses to consumer.Most controversial are the sponsored posts...</p>
+            <div class="post-meta">
+              <span><i class="far fa-comment-alt"></i> 20 comments</span>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-meta">
+              <span><i class="far fa-user"></i> Posted by Rajesh</span><span><i class="far fa-calendar"></i> 02 01 2023</span>
+            </div>
+            <a href="single-post.html" class="post-title">Legal and social consequences.</a>
+            <p class="post-content">Delaware Supreme Court held that stringent standards had to be met to unmask the anonymous bloggers and also took the unusual step of dismissing the libel case itself rather than referring it back to the trial court for reconsideration...</p>
+            <div class="post-meta">
+              <span><i class="far fa-comment-alt"></i> 40 comments</span>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="post-meta">
+              <span><i class="far fa-user"></i> Posted by Rahul</span><span><i class="far fa-calendar"></i> 03 01 2023</span>
+            </div>
+            <a href="single-post.html" class="post-title">Blurring with the mass media.</a>
+            <p class="post-content">Many bloggers, particularly those engaged in participatory journalism, are amateur journalists and editors who work in mainstream media organizations...</p>
+            <div class="post-meta">
+              <span><i class="far fa-comment-alt"></i> 60 comments</span>
+            </div>
+          </div>
+          <a href="{% url 'blog_page' %}" class="main-button">View all posts</a>
+        </div>
+      </div>
+    </section>
+    <section id="subscribe" class="subscribe">
+      <div class="container">
+        <h2>Subscribe & Don’t Miss Out</h2>
+        <p class="">Companies use internal corporate blogs to enhance the communication, culture and employee engagement in a corporation. Internal corporate blogs can be used to communicate news about company policies or procedures, build employee esprit de corps and improve morale. 
+        </p>
+        <form>
+          <input type="email" class="email text-uppercase" id="exampleInputEmail1 aria-describedby=" emailHelp"
+            placeholder="Enter your email"><button type="submit"
+            class="button-subscribe text-uppercase">subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center text-uppercase py-5">
+    <div class="footer-icons ">
+      <a href="#"><img src="{% static 'img/facebook-footer.svg' %}" alt="facebook"></a>
+      <a href="#"><img src="{% static 'img/instagramm-footer.svg' %}" alt="instagram"></a>
+      <a href="#"><img src="{% static 'img/pinterest-footer.svg' %}" alt="pinterest"></a>
+    </div>
+    <div class="copyright pt-4 text-muted text-center">
+      <p>&copy; 2023 YOUR-DOMAIN | Created by <a><strong>ARTEX_BLOG.IN</strong> </a> </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

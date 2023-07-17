@@ -1,0 +1,52 @@
+{% extends 'structure.html' %}
+{% load static %}
+{% block main_body %}
+<main>
+  <div class="container">
+    <h2 class="mx-2 underscore">About Us</h2>
+    <div class="row mainmargin">
+      <div class="col-md-8">
+        <div class="about-page">
+          <h2 class="underscore">Hi there, let's introduce you to the team...</h2>
+          <p class="sup-header">A type of weblog in which posts are written and published by more than one author. The majority of high-profile collaborative blogs are organised according to a single uniting theme, such as politics, technology or advocacy. In recent years, the blogosphere has seen the emergence and growing popularity of more collaborative efforts</p>
+          <div class="line"></div>
+          <img  src="{% static 'img/meeting-2284501_1920.jpg' %}"  class="d-block w-100 mb-5"  alt="..." />
+          <h4 class="underscore">About our team and our work details</h4>
+          <p>A blog can be private, as in most cases, or it can be for business or not-for-profit organization or government purposes. Blogs used internally and only available to employees via an Intranet are called corporate blogs. Companies use internal corporate blogs to enhance the communication, culture and employee engagement in a corporation. Internal corporate blogs can be used to communicate news about company policies or procedures, build employee esprit de corps and improve morale. Companies and other organizations also use external, publicly accessible blogs for marketing, branding, or public relations purposes. Some organizations have a blog authored by their executive; in practice, many of these executive blog posts are penned by a ghostwriter who makes posts in the style of the credited author. Similar blogs for clubs and societies are called club blogs, group blogs, or by similar names; typical use is to inform members and other interested parties of club and member activities. 
+          </p>
+          <h5 class="underscore">Our differents type of blogs</h5>
+          <ul class="list-in-text">
+            <li>Microblogging</li>
+            <li>Personal blogs</li>
+            <li>Corporate and organizational blogs</li>
+          </ul>Many blogs provide commentary on a particular subject or topic, ranging from philosophy, religion, and arts to science, politics, and sports.
+          <p> Others function as more personal online diaries or online brand advertising of a particular individual or company. A typical blog combines text, digital images, and links to other blogs, web pages, and other media related to its topic. Most blogs are primarily textual</p>
+          <div class="features dark text-uppercase d-flex justify-content-around py-5 my-5">
+            <div class="feature-item text-center">
+              <p class="display-2">400</p>
+              <p>Satisfied Clients</p>
+            </div>
+            <div class="feature-item text-center">
+              <p class="display-2">40</p>
+              <p>Awards</p>
+            </div>
+            <div class="feature-item text-center">
+              <p class="display-2">600</p>
+              <p>Completed Projects</p>
+            </div>
+          </div>
+          <p>The impact of blogging on the mainstream media has also been acknowledged by governments. In 2009, the presence of the American journalism industry had declined to the point that several newspaper corporations were filing for bankruptcy, resulting in less direct competition between newspapers within the same circulation area. Discussion emerged as to whether the newspaper industry would benefit from a stimulus package by the federal government. U.S. President Barack Obama acknowledged the emerging influence of blogging upon society by saying, "if the direction of the news is all blogosphere, all opinions, with no serious fact-checking, no serious attempts to put stories in context, then what you will end up getting is people shouting at each other across the void, but not a lot of mutual understanding"</p>
+        </div>
+        <section id="contact" class="social-media">
+          <div class="container">
+            <h2>WANT TO KNOW MORE ABOUT US?</h2>
+            <a href="#"><img src="{% static 'img/facebook_icon.svg' %}" alt="facebook"></a>
+            <a href="#"><img src="{% static 'img/instagram logo_icon.svg' %}" alt="instagram"></a>
+            <a href="#"><img src="{% static 'img/pinterest_icon.svg' %}" alt="pinterest"></a>
+          </div>
+      </section>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock main_body %}
